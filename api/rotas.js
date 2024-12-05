@@ -9,7 +9,10 @@ router.get("/hello", con.hello)
 
 router.post("/user", con.Postnome)
 
-router.post("/nome", con.Getnome)
+router.post("nome", con.Getnome)
+
+router.post("data", con.Getdata)
+
 
 
 

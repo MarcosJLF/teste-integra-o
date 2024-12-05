@@ -1,4 +1,6 @@
 
+import data from '../model/model.js'
+
 const hello = async (req,res) => {
     res.status(200).json({"Status":"rodando"})
 }
@@ -20,4 +22,11 @@ const Getnome = async (req, res) => {
 
 }
 
-export default {hello, Postnome, Getnome}
+const Getdata = async (req, res) => {
+
+    var text = data.testarConexao
+    res.status(200).json({message:text})
+
+}
+
+export default {hello, Postnome, Getnome, Getdata}

@@ -69,3 +69,25 @@ color = async  () => {
 //         body: JSON.stringify({username: "example"})
 //     })
 // }
+
+
+function data(){
+
+    fetch("http://localhost:8000/data", {
+        method: 'GET'
+    })
+    .then(response => {
+        if(!response.ok){
+            throw new Error('Erro na conexão')
+        }
+        return response.json()
+    })
+    .then(data => {
+        console.log(data);
+    })
+    .catch(error => {
+        console.log("sda")
+    })
+}
+
+data()

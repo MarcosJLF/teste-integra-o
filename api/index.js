@@ -10,7 +10,7 @@ app.use(cors())
 app.use(bodyparser.json())
 
 
-app.use("", router)
+app.use("/", router)
 
 
 app.listen(porta, () => {

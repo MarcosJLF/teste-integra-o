@@ -1,4 +1,5 @@
-const { Sequelize} = require('sequelize');
+
+import Sequelize from 'sequelize';
 
 const sequelize = new Sequelize ('users','postgres', 'intelbras', {
   host: 'localhost',
@@ -15,5 +16,4 @@ async function testarConexao(){
     console.error(`Não foi possível conectar ao banco de dados:`, error)
   }
 }
-
-testarConexao();
+export default {testarConexao}
