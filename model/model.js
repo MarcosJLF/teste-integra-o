@@ -16,4 +16,7 @@ async function testarConexao(){
     console.error(`Não foi possível conectar ao banco de dados:`, error)
   }
 }
+
+testarConexao()
+
 export default {testarConexao}
